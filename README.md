@@ -51,8 +51,8 @@ If any function in the sequence returns an error, the remainder of the sequence 
 
 Passing initial args might be useful:
 
-```
-waterfal(...args, [
+```javascript
+waterfall(...args, [
   (done, ...args) => {
 
   },
