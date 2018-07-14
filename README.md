@@ -60,4 +60,8 @@ waterfall(...args, [
 ], allDone)
 ```
 
-It would be more symmetric and aesthetic to allow initial args to be passed to the first job, since the last job's results are passed to `allDone`.
+It would be more symmetric and aesthetic to allow initial args to be passed to the first job, since the last job's results are passed to `allDone`. Of course, this can easily be done with a jobs factory, so I don't think it's *needed*:
+
+```javascript
+waterfall(getJobs(...args), allDone)
+```
