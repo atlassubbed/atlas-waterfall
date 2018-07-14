@@ -79,17 +79,15 @@ describe("waterfall", function(){
     it("should properly chain return values between all functions", function(testDone){
       let numRan = 0; res1 = [1, true, "result1"], res2 = ["result2", {other: 1234}]
       waterfall([
-        (done, err, ...args) => {
+        (done, ...args) => {
           expect(done).to.be.a("function");
-          expect(err).to.be.null;
           expect(args).to.deep.equal([])
           numRan++, job1(err => {
             done(err, ...res1)
           })
         },
-        (done, err, ...args) => {
+        (done, ...args) => {
           expect(done).to.be.a("function");
-          expect(err).to.be.null;
           expect(args).to.deep.equal(res1);
           numRan++, job2(err => {
             done(err, ...res2)
