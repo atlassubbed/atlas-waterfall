@@ -1,0 +1,25 @@
+{
+  "name": "atlas-waterfall",
+  "version": "1.0.0",
+  "description": "Run async functions in a \"waterfall\" series with an onDone callback.",
+  "scripts": {
+    "test-server": "mocha --colors --watch --recursive './test/**/*.test.js'",
+    "test": "mocha --colors --recursive './test/**/*.test.js'"
+  },
+  "main": "./src/index.js",
+  "keywords": [],
+  "author": "atlassubbed <atlassubbed@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "engines": {
+    "node": "^10.1.0",
+    "npm": "^6.0.1"
+  }
+}
